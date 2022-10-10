@@ -1,0 +1,15 @@
+.header-outer {
+    @apply flex flex-row justify-between items-center;
+}
+
+.header {
+    @apply flex flex-row items-center p-4; 
+}
+
+.title-h3 {
+    @apply font-bold; 
+}
+
+.cart-items{
+    @apply p-0 m-0;
+}

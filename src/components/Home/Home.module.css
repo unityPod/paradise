@@ -1,0 +1,11 @@
+.background-img {
+    @apply bg-indigo-100 w-full h-full flex flex-col items-start justify-start;
+}
+
+.header-container {
+    @apply w-screen h-3/4 flex flex-col; 
+}
+
+.products-container{
+    @apply flex flex-row flex-wrap items-center justify-center; 
+}

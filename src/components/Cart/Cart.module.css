@@ -1,0 +1,23 @@
+.cart-container {
+    @apply fixed inset-0 bg-[rgba(0,0,0,0.7)];
+}
+
+.cart-inner {
+    @apply bg-white w-[450px] h-full absolute right-0 overflow-y-scroll p-4;
+}
+
+.cart-object {
+    @apply flex flex-col items-start w-[300px] py-4 py-2;
+}
+
+.cart-item {
+    @apply border-black border-b-8 flex flex-col flex-wrap items-start justify-center m-4 mb-4; 
+}
+
+.cart-img {
+    @apply max-w-[250px] max-h-[250px];
+}
+
+.cart-button {
+    @apply flex items-center px-2 py-4; 
+}

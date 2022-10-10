@@ -1,0 +1,10 @@
+.product-container {
+    @apply bg-indigo-100 flex flex-col flex-wrap items-center justify-center w-[200px] h-[400px] m-[2px]; 
+}
+.product-img {
+    @apply w-[175px] h-[250px]; 
+}
+
+.buy-button {
+    @apply hover:bg-gray-400 hover:text-white;
+}
