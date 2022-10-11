@@ -1,0 +1,7 @@
+.searchIcon {
+    @apply flex flex-row;
+}
+
+.dataResult {
+    @apply fixed bg-white max-w-[410px];
+}
