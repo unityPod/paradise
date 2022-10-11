@@ -71,6 +71,7 @@ export function Home() {
 
   return (
     <div className={styles["background-img"]}>
+      <div>Hello World</div>
       <div className={styles["header-container"]}>
         <Header cart={cart} setIsShowCart={setIsShowCart} />
         <SearchBar products={products} setFilters={setFilters}/>
