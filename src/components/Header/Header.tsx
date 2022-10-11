@@ -1,8 +1,14 @@
 import React from "react";
 import { FiMenu } from "react-icons/fi";
 import styles from "./Header.module.css";
+import { ProductType, CartProduct } from "../../type";
 
-const Header = ({setIsShowCart, cart}) => {
+type HeaderElement = {
+    setIsShowCart: (input: boolean) => void, 
+    cart: CartProduct[]
+}
+
+const Header: (props: HeaderElement) => any = ({setIsShowCart, cart}) => {
     return (
             <div className={styles["header-outer"]}>
                 <h3 className={styles["title-h3"]}>S H O W M E</h3>

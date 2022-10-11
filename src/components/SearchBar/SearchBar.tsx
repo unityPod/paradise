@@ -1,12 +1,65 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./SearchBar.module.css";
+import { ProductType, CartProduct } from '../../type';
+import { BiX } from "react-icons/bi";
+import { IoMdSearch } from "react-icons/io";
 
-const SearchBar = () => {
+type SearchBarElement = {
+    products: ProductType[], 
+    setFilters: (input: ProductType[]) => void
+}
+
+const SearchBar: (props: SearchBarElement) => any = ({products, setFilters}) => {
+    const [filteredData, setFilteredData] = useState<ProductType[]>([]);
+    const [wordEntered, setWordEntered] = useState<string>("");
+  
+    const handleFilter = (e: any) => {
+      const searchWord = e.target.value;
+      setWordEntered(searchWord);
+      const newFilter = products.filter((value) => {
+        return value.title.toLowerCase().includes(searchWord.toLowerCase());
+      });
+  
+      if (searchWord === "") {
+        setFilteredData([]);
+      } else {
+        setFilteredData(newFilter);
+      }
+    };
+  
+    const clearInput = () => {
+      setFilteredData([]);
+      setWordEntered("");
+    };
     return(
-        <div>
-
-
+        <div className="search">
+        <div className="searchInputs">
+          <input
+            type="text"
+            placeholder="Search"
+            value={wordEntered}
+            onChange={handleFilter}
+          />
+          <div className="searchIcon">
+            {filteredData.length === 0 ? (
+              <IoMdSearch />
+            ) : (
+              <BiX id="clearBtn" onClick={clearInput} />
+            )}
+          </div>
         </div>
+        {filteredData.length != 0 && (
+          <div className="dataResult">
+            {filteredData.slice(0, 15).map((value, key) => {
+              return (
+                <a className="dataItem" href={value.image} target="_blank">
+                  <p>{value.title} </p>
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
     )
 }
 

@@ -3,19 +3,23 @@ import { useEffect, useContext, useState } from 'react';
 import UserContext from '../AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import PageNavScroll from '../PageNavScroll/PageNavScroll';
-import SearchBar from '../SearchBar/SearchBar';
+// import SearchBar from '../SearchBar/SearchBar';
 import Header from '../Header/Header';
-import Product from '../Product/Product.jsx';
+import Product from '../Product/Product';
 import styles from "./Home.module.css";
 import Cart from '../Cart/Cart';
+import { ProductType, CartProduct } from '../../type';
+
 
 export function Home() {
   const value = useContext(UserContext)
   const navigate = useNavigate();
 
-  const [products, setProducts] = useState([]);
-  const [filters, setFilters] = useState([]);
-  const [cart, setCart] = useState([])
+  const [products, setProducts] = useState<ProductType[]>([]);
+  const [filters, setFilters] = useState<ProductType[]>([]);
+  const [cart, setCart] = useState<CartProduct[]>([]);
+
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const [isShowCart, setIsShowCart] = useState(false);
 
@@ -28,31 +32,32 @@ export function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const data = await fetch('https://fakestoreapi.com/products/');
+        const data = await fetch("/graphql?query={items{id title price description category image}}");
         const products = await data.json();
 
-        setProducts(products);
-        setFilters(products);
+        setProducts(products.data.items);
+        setFilters(products.data.items);
       } catch (err) { }
     };
 
     fetchProducts();
   }, [])
 
-  const handleAddToCart = product => {
-    setCart(prev => {
-      const findProductInCart = prev.find(item => item.id === product.id);
+  const handleAddToCart = (product: ProductType) => {
+
+    setCart((prev: CartProduct[]) => {
+      const findProductInCart = prev.find((item: CartProduct) => item.id === product.id);
       if (findProductInCart) {
-        return prev.map(item => item.id === product.id ? { ...item, amount: item.amount + 1 } : item
+        return prev.map((item: CartProduct) => item.id === product.id ? { ...item, amount: item.amount + 1 } : item
         );
       }
       return [...prev, { ...product, amount: 1 }]
     })
   }
 
-  const handleRemoveFromCart = (id) => {
-    setCart((prev) => {
-      return prev.reduce((cal, item) => {
+  const handleRemoveFromCart = (id: number) => {
+    setCart((prev: CartProduct[]) => {
+      return prev.reduce((cal: CartProduct[], item: CartProduct) => {
         if (item.id === id) {
           if (item.amount === 1) return cal;
 
@@ -68,13 +73,13 @@ export function Home() {
     <div className={styles["background-img"]}>
       <div className={styles["header-container"]}>
         <Header cart={cart} setIsShowCart={setIsShowCart} />
-        <SearchBar />
-        <PageNavScroll />
+        {/* <SearchBar products={products} setFilters={setFilters}/> */}
+        <PageNavScroll products={products} setFilters={setFilters} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
         <h1>The Most Popular Jacket Today</h1>
       </div>
       <div className={styles["products-container"]}>
-        {products.map(product => (
-          <div>
+        {filters.map((product: ProductType) => (
+          <div key={product.id}>
             <Product handleAddToCart={handleAddToCart} key={product.id} product={product} />
           </div>
         ))}

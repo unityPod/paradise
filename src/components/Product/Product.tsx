@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./Product.module.css";
+import {ProductType} from "../../type";
 
-function Product({product, handleAddToCart}){
+type ProductElement = {
+    product: ProductType, 
+    handleAddToCart: (product: ProductType) => void
+};
+
+function Product({product, handleAddToCart}: ProductElement){
     const DollarUsd = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD'
