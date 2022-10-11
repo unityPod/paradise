@@ -40,7 +40,7 @@ const SearchBar: (props: SearchBarElement) => any = ({products, setFilters}) => 
             value={wordEntered}
             onChange={handleFilter}
           />
-          <div className="searchIcon">
+          <div className={styles["searchIcon"]}>
             {filteredData.length === 0 ? (
               <IoMdSearch />
             ) : (
@@ -49,11 +49,11 @@ const SearchBar: (props: SearchBarElement) => any = ({products, setFilters}) => 
           </div>
         </div>
         {filteredData.length != 0 && (
-          <div className="dataResult">
+          <div className={styles["dataResult"]}>
             {filteredData.slice(0, 15).map((value, key) => {
               return (
-                <a className="dataItem" href={value.image} target="_blank">
-                  <p>{value.title} </p>
+                <a className="dataItem" href={`/${value.id}`} target="_blank">
+                  <p>{value.title}</p>
                 </a>
               );
             })}

@@ -3,7 +3,7 @@ import { useEffect, useContext, useState } from 'react';
 import UserContext from '../AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import PageNavScroll from '../PageNavScroll/PageNavScroll';
-// import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 import Header from '../Header/Header';
 import Product from '../Product/Product';
 import styles from "./Home.module.css";
@@ -73,7 +73,7 @@ export function Home() {
     <div className={styles["background-img"]}>
       <div className={styles["header-container"]}>
         <Header cart={cart} setIsShowCart={setIsShowCart} />
-        {/* <SearchBar products={products} setFilters={setFilters}/> */}
+        <SearchBar products={products} setFilters={setFilters}/>
         <PageNavScroll products={products} setFilters={setFilters} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
         <h1>The Most Popular Jacket Today</h1>
       </div>
