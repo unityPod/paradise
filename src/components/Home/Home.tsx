@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect, useContext, useState } from 'react';
 import UserContext from '../AuthContext/AuthContext';
+import CardContext from '../AuthContext/CardContext';
 import { useNavigate } from 'react-router-dom';
 import PageNavScroll from '../PageNavScroll/PageNavScroll';
 import SearchBar from '../SearchBar/SearchBar';
@@ -9,14 +10,15 @@ import Product from '../Product/Product';
 import styles from "./Home.module.css";
 import Cart from '../Cart/Cart';
 import { ProductType, CartProduct } from '../../type';
+import env from 'react-dotenv';
 
 
 export function Home() {
   const value = useContext(UserContext)
+  const products = useContext(CardContext)
   const navigate = useNavigate();
 
-  const [products, setProducts] = useState<ProductType[]>([]);
-  const [filters, setFilters] = useState<ProductType[]>([]);
+  const [filters, setFilters] = useState<ProductType[]>(products);
   const [cart, setCart] = useState<CartProduct[]>([]);
 
   const [activeCategory, setActiveCategory] = useState("All");
@@ -29,19 +31,6 @@ export function Home() {
     }
   })
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const data = await fetch("https://paradise-server.herokuapp.com/graphql?query={items{id title price description category image}}");
-        const products = await data.json();
-
-        setProducts(products.data.items);
-        setFilters(products.data.items);
-      } catch (err) { }
-    };
-
-    fetchProducts();
-  }, [])
 
   const handleAddToCart = (product: ProductType) => {
 
@@ -71,7 +60,6 @@ export function Home() {
 
   return (
     <div className={styles["background-img"]}>
-      <div>Hello World</div>
       <div className={styles["header-container"]}>
         <Header cart={cart} setIsShowCart={setIsShowCart} />
         <SearchBar products={products} setFilters={setFilters}/>
