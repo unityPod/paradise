@@ -1,5 +1,5 @@
 import React from "react";
-import { FiMenu } from "react-icons/fi";
+import { RiShoppingCart2Line } from "react-icons/ri";
 import styles from "./Header.module.css";
 import { ProductType, CartProduct } from "../../type";
 
@@ -13,7 +13,7 @@ const Header: (props: HeaderElement) => any = ({setIsShowCart, cart}) => {
             <div className={styles["header-outer"]}>
                 <h3 className={styles["title-h3"]}>S H O W M E</h3>
             <div className={styles["header"]}>
-                <button onClick={()=>setIsShowCart(true)}><FiMenu /></button>
+                <button className={styles["cart-icon"]} onClick={()=>setIsShowCart(true)}><RiShoppingCart2Line /></button>
                 <div>{cart.length > 0 && (<span className={styles["cart-items"]}>{cart.length}</span>)}</div>
             </div>
             </div>

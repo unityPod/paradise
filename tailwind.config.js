@@ -33,6 +33,8 @@ module.exports = {
       },
       fontFamily: {
         primary: ["Satoshi", ...defaultTheme.fontFamily.sans],
+        secondary: ["Silkscreen", ...defaultTheme.fontFamily.sans],
+        tertiary: ['Pacifico', ...defaultTheme.fontFamily.sans],
       },
     },
   },

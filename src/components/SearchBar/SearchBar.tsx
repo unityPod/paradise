@@ -34,8 +34,9 @@ const SearchBar: (props: SearchBarElement) => any = ({products, setFilters}) => 
     };
     return(
         <div className="search">
-        <div className="searchInputs">
+        <div className={styles["searchInputs"]}>
           <input
+            className={styles["inputArea"]}
             type="text"
             placeholder="Search"
             value={wordEntered}

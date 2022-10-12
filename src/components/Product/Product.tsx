@@ -18,8 +18,8 @@ function Product({product, handleAddToCart}: ProductElement){
         <Link to={`/product/${product.id}`}> 
         <img className={styles["product-img"]} src={product.image} alt={product.title}/>
         </Link>
-        <h3>{product.title}</h3>
-        <span>{DollarUsd.format(product.price)}</span>
+        <h3 className={styles["product-title"]}>{product.title}</h3>
+        <span className={styles["product-price"]}>{DollarUsd.format(product.price)}</span>
         <button onClick={() => handleAddToCart(product)} className={styles["buy-button"]}>Buy Now</button>
       </div>
     )
