@@ -1,5 +1,5 @@
 .filter-category {
-    @apply flex items-center justify-center;
+    @apply flex items-center justify-center overflow-x-scroll;
 }
 
 .filter-button {
@@ -7,5 +7,5 @@
 }
 
 .category-button {
-    @apply m-2
+    @apply m-2;
 }

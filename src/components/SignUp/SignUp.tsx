@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../AuthContext/AuthContext";
 import { getAuth, createUserWithEmailAndPassword, signInWithPopup, EmailAuthCredential, sendSignInLinkToEmail } from "firebase/auth";
 import config from "../../config";
+import styles from "./SignUp.module.css";
+import { AiFillFacebook } from "react-icons/ai";
+import { RiTwitterLine } from "react-icons/ri";
 
 type Inputs = {
     username: string;
@@ -42,13 +45,22 @@ function SignUp() {
     })
 
     return (
-        <div>
-            <h1>Sign up</h1>
-            <h2>Email</h2>
-            <input type={"email"} placeholder="Please enter your email" onChange={(e) => setEmail(e.target.value)}></input>
-            <h2>Password</h2>
-            <input type={"password"} placeholder="Please enter your password" onChange={(e) => setPassword(e.target.value)}></input>
-            <button onClick={signUp}></button>
+        <div className={styles["background-img"]}>
+        <div className={styles["inner-container"]}>
+            <h1 className={styles["title"]}>JOIN US!</h1>
+            <input className={styles["input"]} type={"email"} placeholder="Email" onChange={(e) => setEmail(e.target.value)}></input>
+            <input className={styles["input"]} type={"password"} placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
+            <button className={styles["button"]} onClick={signUp}>SIGN UP</button>
+            <br />
+                <div className={styles["button-1"]}>
+                <div>FACEBOOK</div>
+                <AiFillFacebook />
+                </div>
+                <div className={styles["button-2"]}>
+                <div>TWITTER</div>
+                <RiTwitterLine />
+                </div>
+        </div>
         </div>
     )
 }
