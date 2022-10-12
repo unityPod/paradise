@@ -64,7 +64,7 @@ export function Home() {
         <Header cart={cart} setIsShowCart={setIsShowCart} />
         <SearchBar products={products} setFilters={setFilters}/>
         <PageNavScroll products={products} setFilters={setFilters} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-        <h1>The Most Popular Jacket Today</h1>
+        <h1>The most stylish, popular fashion items</h1>
       </div>
       <div className={styles["products-container"]}>
         {filters.map((product: ProductType) => (
