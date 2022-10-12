@@ -1,0 +1,39 @@
+.title {
+    @apply font-secondary font-bold text-[70px] leading-[67.05px] text-slate-700 mb-3;
+}
+
+.background-img {
+    @apply font-secondary bg-top bg-indigo-100 w-screen h-screen bg-contain bg-no-repeat flex flex-row items-center justify-center;
+}
+
+.button {
+    @apply font-secondary font-bold text-[20px] text-white w-11/12 my-1 p-4 h-[56px] border-rose-300 bg-rose-300 p-[10px_25px] rounded-[10px]  my-[10px];
+}
+
+.inner-container {
+    @apply bg-indigo-100 w-11/12 h-fit flex flex-col items-center justify-center;
+}
+
+.input {
+    @apply font-secondary font-bold text-[18px] w-4/5 h-[20px] bg-secondary-600 rounded-[10px] my-1 p-4 border-b-4;
+}
+
+.login-section {
+    @apply flex flex-col justify-center items-center;
+}
+
+.description {
+    @apply text-base;
+}
+
+.login-img {
+    @apply w-[600px] h-[600px];
+}
+
+.button-1 {
+    @apply font-secondary font-bold text-[20px] text-white w-4/5 h-[36px] border-blue-600 bg-blue-600 p-[10px_25px] rounded-[10px]  my-[10px] flex items-center justify-evenly;
+}
+
+.button-2 {
+    @apply font-tertiary font-bold text-[20px] text-white w-4/5 h-[36px] border-sky-500 bg-sky-500 p-[10px_25px] rounded-[10px]  my-[10px] flex items-center justify-evenly;
+}

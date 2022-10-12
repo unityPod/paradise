@@ -1,0 +1,31 @@
+.card-out-container {
+    @apply w-screen h-screen bg-indigo-100 flex items-center justify-center;
+}
+
+.card-container {
+    @apply max-w-min max-h-min  bg-white flex flex-col rounded-[10px] items-center justify-center;
+}
+
+.card-img-container {
+    @apply flex flex-row p-2;
+}
+
+.card-image {
+    @apply w-[250px] h-[300px] rounded-[10px];
+}
+
+.card-info {
+    @apply flex flex-col items-center justify-center m-2; 
+}
+
+.card-title {
+    @apply font-secondary font-bold my-1;
+}
+
+.card-des {
+    @apply font-secondary my-1;
+}
+
+.buy-button {
+    @apply bg-indigo-100 border-none m-2 w-3/4 h-[20px] hover:bg-gray-400 hover:text-white;
+}
