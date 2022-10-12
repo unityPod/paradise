@@ -32,7 +32,7 @@ export function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const data = await fetch("/graphql?query={items{id title price description category image}}");
+        const data = await fetch("https://paradise-server.herokuapp.com/graphql?query={items{id title price description category image}}");
         const products = await data.json();
 
         setProducts(products.data.items);
