@@ -3,6 +3,7 @@ import styles from "./SearchBar.module.css";
 import { ProductType, CartProduct } from '../../type';
 import { BiX } from "react-icons/bi";
 import { IoMdSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 type SearchBarElement = {
     products: ProductType[], 
@@ -52,9 +53,9 @@ const SearchBar: (props: SearchBarElement) => any = ({products, setFilters}) => 
           <div className={styles["dataResult"]}>
             {filteredData.slice(0, 15).map((value, key) => {
               return (
-                <a className="dataItem" href={`/${value.id}`} target="_blank">
+                <Link className="dataItem" to={`/product/${value.id}`}>
                   <p>{value.title}</p>
-                </a>
+                </Link>
               );
             })}
           </div>

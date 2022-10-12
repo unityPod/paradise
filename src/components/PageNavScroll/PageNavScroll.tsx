@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./PageNavScroll.module.css";
 import { ProductType, CartProduct } from "../../type";
 
@@ -33,6 +34,7 @@ type PageNavElement = {
 }
 
 const PageNavScroll: (props: PageNavElement) => any = ({ activeCategory, setActiveCategory, products, setFilters }) => {
+    const navigate = useNavigate();
     useEffect(() => {
         if (activeCategory === 'All') {
           setFilters(products);
@@ -42,7 +44,7 @@ const PageNavScroll: (props: PageNavElement) => any = ({ activeCategory, setActi
         const filterCategory = products.filter((item) =>
           activeCategory === 'All' ? item : item.category === activeCategory
         );
-  
+        
         setFilters(filterCategory);
       }, [activeCategory, products, setFilters]);
     return(
