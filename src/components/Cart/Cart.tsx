@@ -1,18 +1,18 @@
 import styles from "./Cart.module.css";
 import {
-    AiOutlinePlusSquare, 
-    AiOutlineMinusSquare, 
+    AiOutlinePlusSquare,
+    AiOutlineMinusSquare,
 } from 'react-icons/ai';
 import { ProductType, CartProduct } from "../../type";
 type CartElement = {
-    setIsShowCart: (input: boolean) => void, 
-    cart: CartProduct[], 
-    handleAddToCart: (product: ProductType) => void, 
+    setIsShowCart: (input: boolean) => void,
+    cart: CartProduct[],
+    handleAddToCart: (product: ProductType) => void,
     handleRemoveFromCart: (id: number) => void
 }
 
 
-const Cart: (props: CartElement) => any = ({setIsShowCart, cart, handleAddToCart, handleRemoveFromCart}) => {
+const Cart: (props: CartElement) => any = ({ setIsShowCart, cart, handleAddToCart, handleRemoveFromCart }) => {
     const DollarUsd = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
@@ -33,13 +33,13 @@ const Cart: (props: CartElement) => any = ({setIsShowCart, cart, handleAddToCart
                             <h3>{item.title}</h3>
                             <p className={styles["cart-amount"]}>{item.amount}</p>
                             <div className={styles["cart-button"]}>
-                                <button onClick={()=> handleRemoveFromCart(item.id)}><AiOutlineMinusSquare /></button>
+                                <button onClick={() => handleRemoveFromCart(item.id)}><AiOutlineMinusSquare /></button>
                                 <span>{DollarUsd.format(item.price)}</span>
-                                <button onClick={()=> handleAddToCart(item)}><AiOutlinePlusSquare /></button>
+                                <button onClick={() => handleAddToCart(item)}><AiOutlinePlusSquare /></button>
                             </div>
                         </div>
                     ))}
-                    { cart.length > 0 && <p>Total: {DollarUsd.format(total(cart))}</p>}
+                    {cart.length > 0 && <p>Total: {DollarUsd.format(total(cart))}</p>}
                 </div>
             </div>
         </div>

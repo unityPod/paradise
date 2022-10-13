@@ -34,8 +34,6 @@ function Login(){
         <div className={styles["background-img"]}>
             <div className={styles["inner-container"]}>
                 <h2 className={styles["title"]}>Paradise</h2>
-            {/* <img className="bg-[url('../assets/login.jpg')]" src={login}/> */}
-                <p className="font-primary font-bold text-[16px] leading-8">Welcome back fashionista</p>
                 <input className={styles["input"]} type={"email"} placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
                 <input className={styles["input"]} type={"password"} placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
                 <button className={styles["button"]} onClick={signIn}>SIGN IN</button>

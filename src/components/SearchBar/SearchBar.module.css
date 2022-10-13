@@ -15,5 +15,5 @@
 }
 
 .dataResult {
-    @apply fixed bg-white max-w-[300px] rounded-[10px] p-2;
+    @apply fixed bg-white max-w-[260px] rounded-[10px] mx-10 px-1;
 }

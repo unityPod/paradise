@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import {useState} from "react";
 import styles from "./SearchBar.module.css";
-import { ProductType, CartProduct } from '../../type';
+import { ProductType } from '../../type';
 import { BiX } from "react-icons/bi";
 import { IoMdSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
