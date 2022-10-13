@@ -51,7 +51,7 @@ const PageNavScroll: (props: PageNavElement) => any = ({ activeCategory, setActi
     return(
             <div className={styles["filter-category"]}>
                 {categories.map(item=>(
-                    <div className={styles["filter-button"]}>
+                    <div key={item.id} className={styles["filter-button"]}>
                     <button  onClick={() => setActiveCategory(item.name)} key={item.id} className={clsx(styles["category-button"], `${
                         activeCategory === item.name}`)}>{item.name}</button>
                     </div>
