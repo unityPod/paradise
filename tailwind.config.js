@@ -4,9 +4,6 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundImage: theme => ({
-        'login-img': "url('./assets/login.jpg')"
-      }),
       screens: {
         sm: "375px",
         md: "768px",
@@ -34,7 +31,7 @@ module.exports = {
       fontFamily: {
         primary: ["Satoshi", ...defaultTheme.fontFamily.sans],
         secondary: ["Silkscreen", ...defaultTheme.fontFamily.sans],
-        tertiary: ['Pacifico', ...defaultTheme.fontFamily.sans],
+        tertiary: ["Pacifico", ...defaultTheme.fontFamily.sans],
       },
     },
   },

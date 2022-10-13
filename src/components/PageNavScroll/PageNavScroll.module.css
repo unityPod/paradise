@@ -1,11 +1,11 @@
 .filter-category {
-    @apply flex items-center justify-center overflow-x-scroll;
+    @apply flex items-center justify-start overflow-x-scroll;
 }
 
 .filter-button {
-    @apply m-1 bg-black text-white h-[40px];
+    @apply mx-1 bg-indigo-100 text-white h-[40px] hover:bg-black;
 }
 
 .category-button {
-    @apply m-2;
+    @apply bg-indigo-100 border-[0px] hover:bg-black hover:text-white; 
 }

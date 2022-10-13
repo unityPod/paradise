@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./PageNavScroll.module.css";
 import { ProductType, CartProduct } from "../../type";
+import clsx from "clsx";
 
 const categories = [
     {
@@ -51,8 +52,8 @@ const PageNavScroll: (props: PageNavElement) => any = ({ activeCategory, setActi
             <div className={styles["filter-category"]}>
                 {categories.map(item=>(
                     <div className={styles["filter-button"]}>
-                    <button  onClick={() => setActiveCategory(item.name)} key={item.id} className={`${
-                        activeCategory === item.name}`}>{item.name}</button>
+                    <button  onClick={() => setActiveCategory(item.name)} key={item.id} className={clsx(styles["category-button"], `${
+                        activeCategory === item.name}`)}>{item.name}</button>
                     </div>
                 ))}
             </div>

@@ -1,5 +1,5 @@
 .title {
-    @apply font-secondary font-bold text-[70px] leading-[67.05px] text-slate-700 mb-3;
+    @apply animate-bounce font-secondary font-bold text-[70px] leading-[67.05px] text-slate-700 mb-3;
 }
 
 .background-img {
@@ -11,11 +11,11 @@
 }
 
 .inner-container {
-    @apply w-11/12 h-fit flex flex-col items-center justify-center;
+    @apply w-11/12 h-fit flex flex-col items-center justify-center bg-gradient-to-r from-indigo-100;
 }
 
 .input {
-    @apply font-secondary font-bold text-[18px] w-4/5 h-[20px] bg-secondary-600 rounded-[10px] my-1 p-4 border-b-4;
+    @apply font-secondary font-bold text-[18px] w-4/5 h-[20px] bg-secondary-600 rounded-[10px] my-1 p-4 border-none  border-b-2;
 }
 
 .login-section {
