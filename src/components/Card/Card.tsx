@@ -11,7 +11,6 @@ export function Card() {
     const products = useContext(CardContext);
     const { id } = useParams();
     let idNum = parseInt(id || "0");
-    console.log(products)
     const product = products.find((p: ProductType) => p.id === idNum) || {
         id: "0",
         title: "Product not found",
