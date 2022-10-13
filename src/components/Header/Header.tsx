@@ -13,7 +13,7 @@ const Header: (props: HeaderElement) => any = ({setIsShowCart, cart}) => {
             <div className={styles["header-outer"]}>
                 <h3 className={styles["title-h3"]}>S H O W M E</h3>
             <div className={styles["header"]}>
-                <button className={styles["cart-icon"]} onClick={()=>setIsShowCart(true)}><RiShoppingCart2Line /></button>
+                <button className={styles["cart-icon"]} onClick={()=>setIsShowCart(true)}><RiShoppingCart2Line className={styles["cart-icon"]}/></button>
                 <div>{cart.length > 0 && (<span className={styles["cart-items"]}>{cart.length}</span>)}</div>
             </div>
             </div>

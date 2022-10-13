@@ -13,6 +13,7 @@ import config from "../../config";
 type UserType = {
     user: User | null
 }
+
 const UserContext = createContext<UserType>({user:null});
 type Props = {
     children?: JSX.Element

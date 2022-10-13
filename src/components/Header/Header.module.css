@@ -3,17 +3,21 @@
 }
 
 .header {
-    @apply flex flex-row items-center p-4; 
+    @apply flex flex-row items-center p-10; 
 }
 
 .title-h3 {
-    @apply font-secondary font-bold; 
+    @apply text-[30px] font-secondary font-bold; 
 }
 
 .cart-items{
-    @apply p-0 m-0;
+    @apply p-0 m-1 font-bold text-[20px];
 }
 
 .cart-icon {
-    @apply border-none bg-blue-500 rounded-[50px];
+    @apply border-none bg-indigo-100;
+}
+
+.cart-icon {
+    @apply h-[30px] w-[30px];
 }
