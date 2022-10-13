@@ -3,9 +3,9 @@
 }
 
 .filter-button {
-    @apply mx-1 bg-indigo-100 text-white h-[40px] hover:bg-black;
+    @apply flex justify-center mx-1 bg-indigo-100 text-white h-[40px] hover:bg-black;
 }
 
 .category-button {
-    @apply bg-indigo-100 border-[0px] hover:bg-black hover:text-white; 
+    @apply text-[1rem] font-bold bg-indigo-100 border-[0px] hover:bg-black hover:text-white; 
 }

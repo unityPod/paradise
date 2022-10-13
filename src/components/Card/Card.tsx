@@ -28,9 +28,9 @@ export function Card() {
                     <Link to="/home"><BsXLg /></Link>
                 </div>
                 <div className={styles["card-info"]}>
-                <div className={styles["card-title"]}>{product.title}</div>
-                <div className={styles["card-des"]}>{product.description}</div>
-                <button className={styles["buy-button"]}>Buy Now</button>
+                    <div className={styles["card-title"]}>{product.title}</div>
+                    <div className={styles["card-des"]}>{product.description}</div>
+                    <button className={styles["buy-button"]}>Buy Now</button>
                 </div>
             </div>
         </div>

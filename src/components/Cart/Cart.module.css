@@ -3,7 +3,7 @@
 }
 
 .cart-inner {
-    @apply bg-white w-[450px] h-full absolute right-0 overflow-y-scroll p-4;
+    @apply bg-white w-[450px] h-full absolute right-0 sm:overflow-y-scroll p-4;
 }
 
 .cart-object {

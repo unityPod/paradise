@@ -3,7 +3,7 @@
 }
 
 .card-container {
-    @apply max-w-min max-h-min  bg-white flex flex-col rounded-[10px] items-center justify-center;
+    @apply max-w-min max-h-min bg-white flex flex-col rounded-[10px] items-center justify-center;
 }
 
 .card-img-container {
@@ -15,7 +15,7 @@
 }
 
 .card-info {
-    @apply flex flex-col items-center justify-center m-2; 
+    @apply flex flex-col items-center justify-center m-2;
 }
 
 .card-title {
@@ -27,5 +27,5 @@
 }
 
 .buy-button {
-    @apply border-none m-2 w-3/4 h-[20px] hover:bg-gray-400 hover:text-white;
+    @apply bg-transparent rounded m-2 w-3/4 h-[40px] text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent hover:bg-blue-500 hover:text-white;
 }
