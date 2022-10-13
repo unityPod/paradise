@@ -2,6 +2,10 @@
     @apply flex py-2; 
 }
 
+.searchInputs {
+    @apply md:px-10; 
+}
+
 .inputArea {
     @apply text-[18px] h-[25px] border-none hover:border-white bg-secondary-100 rounded-l-[10px] p-[4px]; 
 }
@@ -11,5 +15,5 @@
 }
 
 .dataResult {
-    @apply fixed bg-white max-w-[300px] ml-1 rounded-[10px] p-2;
+    @apply fixed bg-white max-w-[300px] rounded-[10px] p-2;
 }

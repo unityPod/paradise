@@ -1,4 +1,3 @@
-import React, {useContext} from "react";
 import styles from "./Product.module.css";
 import {ProductType} from "../../type";
 import { Link } from "react-router-dom";

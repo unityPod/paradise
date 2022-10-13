@@ -7,11 +7,11 @@
 }
 
 .button {
-    @apply font-secondary font-bold text-[20px] text-white w-11/12 my-1 p-4 h-[56px] border-rose-300 bg-rose-300 p-[10px_25px] rounded-[10px]  my-[10px];
+    @apply font-secondary font-bold text-[20px] text-white w-5/6 my-2 h-[56px] border-rose-300 bg-rose-300 rounded-[10px];
 }
 
 .inner-container {
-    @apply bg-indigo-100 w-11/12 h-fit flex flex-col items-center justify-center;
+    @apply bg-indigo-100 w-11/12 h-fit flex flex-col items-center justify-center md:w-[800px];
 }
 
 .input {

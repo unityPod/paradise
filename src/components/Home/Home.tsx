@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useEffect, useContext, useState } from 'react';
 import UserContext from '../AuthContext/AuthContext';
 import CardContext from '../AuthContext/CardContext';
@@ -10,7 +9,7 @@ import Product from '../Product/Product';
 import styles from "./Home.module.css";
 import Cart from '../Cart/Cart';
 import { ProductType, CartProduct } from '../../type';
-import env from 'react-dotenv';
+
 
 
 export function Home() {
@@ -64,7 +63,7 @@ export function Home() {
         <Header cart={cart} setIsShowCart={setIsShowCart} />
         <SearchBar products={products} setFilters={setFilters}/>
         <PageNavScroll products={products} setFilters={setFilters} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-        <h1>The most stylish, popular fashion items</h1>
+        <h1 className={styles["home-title"]}>The most stylish, popular fashion items</h1>
       </div>
       <div className={styles["products-container"]}>
         {filters.map((product: ProductType) => (
