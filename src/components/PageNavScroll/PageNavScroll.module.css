@@ -1,5 +1,5 @@
 .filter-category {
-    @apply flex items-center justify-start overflow-x-scroll;
+    @apply flex items-center justify-start overflow-hidden md:px-10;
 }
 
 .filter-button {

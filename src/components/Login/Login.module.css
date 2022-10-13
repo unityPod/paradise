@@ -1,5 +1,5 @@
 .title {
-    @apply animate-bounce font-secondary font-bold text-[70px] leading-[67.05px] text-slate-700 mb-3;
+    @apply animate-bounce font-tertiary font-bold text-[70px] leading-[67.05px] text-slate-700 mb-3;
 }
 
 .background-img {
@@ -7,11 +7,11 @@
 }
 
 .button {
-    @apply font-secondary font-bold text-[20px] text-white w-11/12 my-1 p-4 h-[56px] border-rose-300 bg-rose-300 p-[10px_25px] rounded-[10px]  my-[10px];
+    @apply font-secondary font-bold text-[20px] text-white w-5/6 my-2 h-[56px] border-rose-300 bg-rose-300 rounded-[10px];
 }
 
 .inner-container {
-    @apply w-11/12 h-fit flex flex-col items-center justify-center bg-gradient-to-r from-indigo-100;
+    @apply w-11/12 max-h-fit flex flex-col items-center justify-center bg-gradient-to-r from-indigo-100 md:w-[800px] rounded-[10px] py-6;
 }
 
 .input {
@@ -36,4 +36,8 @@
 
 .button-2 {
     @apply font-tertiary font-bold text-[20px] text-white w-4/5 h-[36px] border-sky-500 bg-sky-500 p-[10px_25px] rounded-[10px]  my-[10px] flex items-center justify-evenly;
+}
+
+.signup-link {
+    @apply font-bold text-white no-underline text-[20px]; 
 }

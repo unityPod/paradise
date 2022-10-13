@@ -2,7 +2,6 @@ import CardContext from "../AuthContext/CardContext"
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductType } from "../../type";
-import { stringLength } from "@firebase/util";
 import { BsXLg } from "react-icons/bs";
 import styles from "./Card.module.css";
 import { Link } from "react-router-dom";

@@ -27,5 +27,5 @@
 }
 
 .buy-button {
-    @apply bg-indigo-100 border-none m-2 w-3/4 h-[20px] hover:bg-gray-400 hover:text-white;
+    @apply border-none m-2 w-3/4 h-[20px] hover:bg-gray-400 hover:text-white;
 }

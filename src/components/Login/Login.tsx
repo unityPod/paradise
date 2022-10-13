@@ -1,8 +1,6 @@
-import React from "react";
-import { useState, useContext, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import login from "../../assets/login.jpg";
 import styles from "./Login.module.css";
 import config from "../../config";
 import { AiFillFacebook } from "react-icons/ai";
@@ -41,6 +39,8 @@ function Login(){
                 <input className={styles["input"]} type={"email"} placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
                 <input className={styles["input"]} type={"password"} placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
                 <button className={styles["button"]} onClick={signIn}>SIGN IN</button>
+                <Link to="/signup" className={styles["signup-link"]}>SIGN UP HERE</Link>
+                <br />
                 <br />
                 <div className={styles["button-1"]}>
                 <div>FACEBOOK</div>

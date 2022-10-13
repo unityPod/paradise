@@ -1,5 +1,5 @@
 .product-container {
-    @apply bg-indigo-100 flex flex-col flex-wrap items-center justify-center w-[200px] h-[425px] m-[2px]; 
+    @apply min-h-fit bg-indigo-100 flex flex-col flex-wrap items-center justify-center w-[200px] m-[2px]; 
 }
 .product-img {
     @apply w-[185px] h-[250px]; 
